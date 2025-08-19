@@ -17,7 +17,13 @@ DEFAULTS = {
     "charge_eff": 0.95,
     "discharge_eff": 0.95,
     "timezone": "Europe/Amsterdam",
-    "_configured": False
+    "_configured": False,
+    "solis_enabled": False,
+    "solis_api_id": "",
+    "solis_api_secret": "",
+    "solis_inverter_sn": "",
+    "use_solis_soc_today": True,     # bij 'Vandaag' SOC automatisch ophalen als enabled
+    "allow_solis_control": False    # alleen aanzetten als Device Control API rechten geregeld zijn
 }
 
 CONFIG_PATH = "fe_planner_gui_config.json"
