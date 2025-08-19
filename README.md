@@ -9,22 +9,23 @@ Het doel is **energiekosten minimaliseren** en **autonomie maximaliseren**: zove
 
 ## ✨ Wat doet ChargeMind?
 
-- **Slimme laad/ontlaadadviezen**: berekent voor vandaag of morgen het goedkoopste uur om te laden en het duurste uur om te ontladen.
-- **Zonne-opbrengst simulatie**: houdt rekening met oriëntatie, hellingshoek en verwachte zoninstraling.
-- **Batterijbeperkingen**: houdt rekening met omvormer-vermogen en (on)haalbare SOC-doelen.
-- **Actieschema**: toont in tekst (en grafiek) welke actie je moet ondernemen, inclusief tijden en doelen.
+- **Slimme laad/ontlaadadviezen**: berekent voor vandaag of morgen het goedkoopste uur om te laden en het duurste uur om te ontladen.  
+- **Zonne-opbrengst simulatie**: houdt rekening met oriëntatie, hellingshoek en verwachte zoninstraling.  
+- **Batterijbeperkingen**: houdt rekening met omvormer-vermogen en (on)haalbare SOC-doelen.  
+- **Actieschema**: toont in tekst (en grafiek) welke actie je moet ondernemen, inclusief tijden en doelen.  
 - **Visualisaties**:
-  - Dagprijs-verloop met markering van laad- en ontlaad-uren.
-  - SOC-curve met invloed van PV, netladen en ontladen.
+  - Dagprijs-verloop met markering van laad- en ontlaad-uren.  
+  - SOC-curve met invloed van PV, netladen en ontladen.  
 
 ---
 
 ## 🛠️ Installatie
 
-### 1. Clone de repository
+### 1. Repository clonen
 ```bash
 git clone https://github.com/<jouw-repo>/ChargeMind.git
 cd ChargeMind
+
 2. Vereisten installeren
 
 ChargeMind draait op Python 3.10+.
@@ -35,15 +36,15 @@ pip install -r requirements.txt
 
 Standaard gebruikte libraries:
 
-tkinter (GUI)
+tkinter – GUI
 
-matplotlib (grafieken)
+matplotlib – grafieken
 
-requests (API-calls Open-Meteo)
+requests – API-calls (Open-Meteo)
 
-python_frank_energie (Frank Energie API)
+python_frank_energie – Frank Energie API
 
-zoneinfo (tijdzones)
+zoneinfo – tijdzones
 
 3. Starten
 python main.py
@@ -69,9 +70,7 @@ Grafieken met dagprijzen en SOC-verloop.
 Optioneel: pas instellingen aan (locatie, PV, batterij, omvormer).
 
 📊 Voorbeeldoutput
-
-Advies (tekstueel):
-
+Advies (tekstueel)
 === 🔋 Slim advies (Vandaag) ===
 Nu: 19-08 09:55 | Huidig SOC: 39.0%
 
@@ -82,34 +81,33 @@ Duurste uur:     19-08 20:00 → 19-08 21:00 | € 0.125/kWh
 • Laad in 19-08 14:00–15:00 tot **90.8%**.
 • Ontlaad in 19-08 20:00–21:00 tot **35.0%** (nachtreserve).
 
+Grafieken
 
-Grafieken:
-
-📈 Dagprijzen (uurbloklijn, laadslot rood, ontlaadslot groen).
+📈 Dagprijzen (uurbloklijn, laadslot = rood, ontlaadslot = groen).
 
 🔋 SOC-curve (kleurcodering per oorzaak: PV = groen, netladen = rood, ontladen = oranje, reserve = paars).
 
 🌍 Databronnen
 
-Frank Energie API – dynamische elektriciteitsprijzen.
+Frank Energie API – dynamische elektriciteitsprijzen
 
-Open-Meteo API – zoninstraling en weerprognoses (zonnekracht, bewolkingsgraad).
+Open-Meteo API – zoninstraling en weerprognoses (zonnekracht, bewolkingsgraad)
 
-Eigen configuratie – PV-richting, hellingshoek, batterijcapaciteit en omvormervermogen.
+Eigen configuratie – PV-richting, hellingshoek, batterijcapaciteit en omvormervermogen
 
 📌 Roadmap
 
 Komende uitbreidingen waar aan gewerkt wordt:
 
-🔌 Directe koppeling met omvormers (Solis, Dyness, enz.).
+🔌 Directe koppeling met omvormers (Solis, Dyness, enz.)
 
-🏢 Integratie energieleveranciers voor meer marktdata.
+🏢 Integratie energieleveranciers voor meer marktdata
 
-☀️ Meer METEO-variabelen (temperatuur, bewolkingsgraad, seizoenscorrectie).
+☀️ Meer METEO-variabelen (temperatuur, bewolkingsgraad, seizoenscorrectie)
 
-📱 Web- of mobiele versie naast Tkinter GUI.
+📱 Web- of mobiele versie naast Tkinter GUI
 
-📊 Uitgebreidere rapportage (export naar CSV/Excel).
+📊 Uitgebreidere rapportage (export naar CSV/Excel)
 
 ⚠️ Disclaimer
 
