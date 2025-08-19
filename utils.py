@@ -37,3 +37,20 @@ def fmt(dt_aware, tz: ZoneInfo) -> str:
 
 def sunset_guess(base_dt: datetime) -> datetime:
     return base_dt.replace(hour=21, minute=0, second=0, microsecond=0)
+
+# utils.py (toevoegen)
+def fmt_hhmm(dt, tz):
+    return dt.astimezone(tz).strftime("%H:%M")
+
+def fmt_date(dt, tz):
+    return dt.astimezone(tz).strftime("%d-%m")
+
+def fmt_eur(v):
+    # voor hele/halve centen mooi: €0.01 → €0.01; €0.0 → €0.00
+    return f"€ {v:.2f}"
+
+def fmt_kwh(v):
+    return f"{v:.3f} kWh"
+
+def fmt_pct(v):
+    return f"{v:.1f}%"
